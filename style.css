@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  background: radial-gradient(circle at top left, #1a2a6c, #b21f1f, #fdbb2d);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.wrapper {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 3rem;
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.3s ease;
+}
+
+header {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #2d3436;
+ text-underline-offset: 8px;
+}
+
+#max-num {
+  color: #d63031;
+  text-decoration: underline;
+}
+
+.guess {
+  height: 30px; 
+  margin: 1.5rem 0;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column; 
+  gap: 15px;
+  margin-bottom: 2rem;
+}
+
+input[type="number"] {
+  padding: 1rem;
+  border: 2px solid #dfe6e9;
+  border-radius: 12px;
+  outline: none;
+  font-size: 1.5rem;
+  text-align: center;
+  transition: border-color 0.3s;
+}
+
+input[type="number"]:focus {
+  border: 2px solid #6c5ce7; 
+  background-color: #fff;
+  transform: scale(1.02); 
+  transition: all 0.2s ease;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  flex: 1;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#check-btn {
+  background: #6c5ce7;
+  color: white;
+  box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
+}
+
+#check-btn:hover {
+  background: #5b4bc4;
+  transform: translateY(-2px);
+}
+
+#quit-btn {
+  background: #f1f2f6;
+  color: #2d3436;
+}
+
+#quit-btn:hover {
+  background: #dfe6e9;
+}
+
+p {
+  color: #636e72;
+  font-size: 0.9rem;
+}
+
+.chances {
+  display: inline-block;
+  background: #ffeaa7;
+  color: #d35400;
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: 1rem;
+}
+
+/* Logic feedback colors */
+.success { color: #27ae60; transform: scale(1.1); }
+.error { color: #e74c3c; animation: shake 0.3s; }
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}
